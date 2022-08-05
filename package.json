@@ -10,6 +10,7 @@
         "helmet": "^5.1.1",
         "morgan": "^1.10.0",
         "pg": "^8.7.3",
+        "reflect-metadata": "^0.1.13",
         "typeorm": "^0.3.7",
         "uuidv4": "^6.2.13"
     },
@@ -34,6 +35,8 @@
     "scripts": {
         "test": "jest",
         "build": "tsc --build",
-        "start": "node  -r ts-node/register/transpile-only -r tsconfig-paths/register ."
+        "start": "node  -r ts-node/register/transpile-only -r tsconfig-paths/register .",
+        "typeorm": "ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js",
+        "typeorm:generate": "yarn typeorm  migration:generate -d src/infra/orm/typeorm/index.ts"
     }
 }

@@ -1,10 +1,17 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "ES2022",
+    "target": "ESNext",
     "strict": true,
     "baseUrl": "./",
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "paths": {
+      "@/source/*": [
+        "./*"
+      ],
       "@/tests/*": [
         "./tests/*"
       ],
@@ -24,7 +31,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
     "outDir": "./dist"
   },
   "include": [
